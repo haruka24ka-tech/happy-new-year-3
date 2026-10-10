@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HappyNewYear</title>
+</head>
+
+<body>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Wish for You ✦</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Tahoma,"Segoe UI",sans-serif;
+  color:#fff;
+  text-align:center;
+  overflow-x:hidden;
+  background:linear-gradient(160deg,#070b22,#17113b,#081d3c);
+}
+#sky{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:0;
+}
+.stars{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  background-image:
+    radial-gradient(2px 2px at 15% 20%,#fff,transparent),
+    radial-gradient(2px 2px at 75% 15%,#b8d8ff,transparent),
+    radial-gradient(1px 1px at 50% 35%,#fff,transparent),
+    radial-gradient(2px 2px at 88% 60%,#d7c5ff,transparent),
+    radial-gradient(1px 1px at 25% 75%,#fff,transparent),
+    radial-gradient(2px 2px at 65% 85%,#a8d8ff,transparent);
+  background-size:260px 230px;
+  animation:twinkle 4s ease-in-out infinite alternate;
+}
+@keyframes twinkle{
+  from{opacity:.35}
+  to{opacity:1}
+}
+.container{
+  position:relative;
+  z-index:1;
+  width:92%;
+  max-width:720px;
+  margin:auto;
+  padding:55px 0 65px;
+}
+.eyebrow{
+  color:#b9caff;
+  letter-spacing:5px;
+  font-size:12px;
+}
+h1{
+  font-size:clamp(34px,8vw,65px);
+  line-height:1.15;
+  margin:20px 0 10px;
+  background:linear-gradient(90deg,#fff,#b9caff,#f4cfff,#fff);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  text-shadow:0 0 35px rgba(153,170,255,.16);
+}
+.subtitle{
+  color:#c6cde9;
+  font-size:15px;
+  line-height:1.9;
+}
+.year{
+  font-size:clamp(48px,12vw,85px);
+  font-weight:bold;
+  letter-spacing:8px;
+  margin:20px 0;
+  color:#d9e6ff;
+  text-shadow:0 0 25px #789cff;
+}
+.panel{
+  margin:25px auto;
+  padding:25px 22px;
+  border:1px solid rgba(195,211,255,.22);
+  border-radius:22px;
+  background:rgba(12,19,53,.62);
+  box-shadow:0 0 40px rgba(82,104,255,.12);
+  backdrop-filter:blur(8px);
+}
+.greeting{
+  min-height:105px;
+  font-size:17px;
+  line-height:2;
+  color:#f0edff;
+  white-space:pre-line;
+}
+.cursor{
+  display:inline-block;
+  width:2px;
+  height:18px;
+  background:#d9c5ff;
+  margin-left:4px;
+  animation:blink .8s infinite;
+  vertical-align:middle;
+}
+@keyframes blink{50%{opacity:0}}
+button{
+  border:1px solid rgba(218,225,255,.35);
+  border-radius:30px;
+  padding:12px 19px;
+  margin:6px;
+  color:#fff;
+  background:linear-gradient(120deg,#343a79,#684e91);
+  font-size:14px;
+  cursor:pointer;
+  transition:.25s;
+}
+button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 22px rgba(163,176,255,.4);
+}
+.letter{
+  display:none;
+  text-align:left;
+  white-space:pre-line;
+  line-height:2.1;
+  color:#e6e7ff;
+  padding:20px;
+  margin-top:20px;
+  border-radius:16px;
+  background:rgba(4,9,30,.55);
+  border:1px solid rgba(196,201,255,.2);
+  animation:appear .8s ease;
+}
+@keyframes appear{
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.moon{
+  position:fixed;
+  top:45px;
+  right:8%;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#e4eaff;
+  box-shadow:0 0 35px rgba(204,220,255,.45);
+  z-index:0;
+}
+.moon:after{
+  content:"";
+  position:absolute;
+  top:-8px;
+  left:17px;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  background:#11102f;
+}
+.footer{
+  margin-top:35px;
+  font-size:12px;
+  color:#8998c6;
+  line-height:2;
+}
+.sparkle{
+  color:#c5d5ff;
+  animation:twinkle 2s infinite alternate;
+}
+@media(max-width:480px){
+  .container{padding-top:90px}
+  .panel{padding:20px 15px}
+  .moon{width:42px;height:42px;top:25px}
+  .moon:after{width:40px;height:40px;left:13px}
+}
+</style>
+</head>
+
+<body>
+<canvas id="sky"></canvas>
+<div class="stars"></div>
+<div class="moon"></div>
+
+<div class="container">
+  <div class="eyebrow">A LITTLE WISH • JUST FOR YOU</div>
+
+  <h1>Happy New Year</h1>
+
+  <div class="subtitle">
+    ถึงพี่ลูน่าาาาาาาา<br>
+   เว็บนี้เว็บใหม่ครับทำเพื่อพี่เลย
+  </div>
+
+  <div class="year">2027</div>
+
+  <div class="subtitle">
+    <span class="sparkle">✦</span>
+    ขอให้ปีใหม่นี้ใจดีกับพี่มาก ๆ
+    <span class="sparkle">✦</span>
+  </div>
+
+  <div class="panel">
+    <div class="greeting" id="greeting"></div>
+    <button onclick="showLetter()">✉ เปิดจดหมาย</button>
+    <button onclick="fireworks()">✦ จุดพลุ</button>
+
+    <div class="letter" id="letter">
+ถึงพี่ลูน่า
+
+สวัสดีปีใหม่นะครับ ✨
+ขอให้ปีนี้เป็นปีที่ดีสำหรับพี่
+ขอให้มีรอยยิ้มในวันที่มีความสุข
+และมีใครสักคนคอยอยู่ข้าง ๆ ในวันที่เหนื่อยล้า
+ขอให้สุขภาพแข็งแรงได้ทำสิ่งที่ตัวเองชอบ
+และค่อย ๆ เข้าใกล้ความฝันมากขึ้นในทุกวันผมอาจไม่ได้มีของขวัญที่ยิ่งใหญ่อะไร
+แต่ตั้งใจทำหน้าเว็บนี้ขึ้นมาเพื่อส่งคำอวยพรเล็ก ๆ ให้พี่โดยเฉพาะ
+ขอบคุณที่เข้ามาเป็นส่วนหนึ่งในความทรงจำดี ๆ ของผมนะครับ
+
+ขอให้ปีนี้มีเรื่องดี ๆ เกิดขึ้นกับพี่เยอะ ๆ เลยนะครับ
+
+    </div>
+  </div>
+
+  <div class="footer">
+    Made with a little bit of starlight ✦<br>
+    ขอให้ปีใหม่ของพี่เต็มไปด้วยความสุข
+  </div>
+</div>
+
+<script>
+var greetingText =
+"สุขสันต์วันปีใหม่ 2027 นะครับ ✨\n"+
+"ขอให้ปีนี้เป็นปีที่ดีสำหรับพี่ลูน่า\n"+
+"ขอให้มีความสุข สุขภาพแข็งแรง\n"+
+"และได้พบเจอแต่เรื่องราวที่ดีนะครับ";
+
+var greeting = document.getElementById("greeting");
+var letter = document.getElementById("letter");
+var musicButton = document.getElementById("musicButton");
+var charIndex = 0;
+
+function typeGreeting(){
+  if(charIndex < greetingText.length){
+    greeting.innerHTML =
+      greetingText.substring(0,charIndex+1).replace(/\n/g,"<br>")+
+      '<span class="cursor"></span>';
+    charIndex++;
+    setTimeout(typeGreeting,65);
+  }else{
+    greeting.innerHTML = greetingText.replace(/\n/g,"<br>");
+  }
+}
+setTimeout(typeGreeting,900);
+
+function showLetter(){
+  if(letter.style.display === "block"){
+    letter.style.display = "none";
+  }else{
+    letter.style.display = "block";
+    fireworks();
+  }
+}
+
+var canvas = document.getElementById("sky");
+var ctx = canvas.getContext("2d");
+var particles = [];
+
+function resizeCanvas(){
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize",resizeCanvas);
+
+function fireworks(){
+  var x = Math.random()*canvas.width;
+  var y = Math.random()*canvas.height*.55;
+  var colors = ["#a9c7ff","#f3c9ff","#ffffff","#8de6ff","#c6a8ff"];
+  var color = colors[Math.floor(Math.random()*colors.length)];
+  var i;
+  for(i=0;i<65;i++){
+    var angle = Math.PI*2*i/65;
+    var speed = 1+Math.random()*4;
+    particles.push({
+      x:x,y:y,
+      vx:Math.cos(angle)*speed,
+      vy:Math.sin(angle)*speed,
+      life:75,
+      color:color
+    });
+  }
+}
+
+function animate(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  var i;
+  for(i=particles.length-1;i>=0;i--){
+    var p=particles[i];
+    p.x+=p.vx;
+    p.y+=p.vy;
+    p.vy+=0.025;
+    p.vx*=0.99;
+    p.vy*=0.99;
+    p.life--;
+    ctx.globalAlpha=Math.max(0,p.life/75);
+    ctx.fillStyle=p.color;
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,2,0,Math.PI*2);
+    ctx.fill();
+    if(p.life<=0){particles.splice(i,1);}
+  }
+  ctx.globalAlpha=1;
+  requestAnimationFrame(animate);
+}
+animate();
+
+setInterval(function(){
+  if(Math.random()>.45){fireworks();}
+},3500);
+
+var audioContext=null;
+var musicTimer=null;
+var musicPlaying=false;
+var noteIndex=0;
+var notes=[261.63,329.63,392.00,329.63,293.66,349.23,440.00,392.00,
+           261.63,329.63,392.00,523.25,440.00,392.00,329.63,293.66];
+
+function playNote(){
+  if(!musicPlaying || !audioContext){return;}
+  var osc=audioContext.createOscillator();
+  var gain=audioContext.createGain();
+  osc.type="sine";
+  osc.frequency.value=notes[noteIndex%notes.length];
+  gain.gain.setValueAtTime(0.0001,audioContext.currentTime);
+  gain.gain.exponentialRampToValueAtTime(0.07,audioContext.currentTime+0.05);
+  gain.gain.exponentialRampToValueAtTime(0.0001,audioContext.currentTime+0.48);
+  osc.connect(gain);
+  gain.connect(audioContext.destination);
+  osc.start();
+  osc.stop(audioContext.currentTime+0.5);
+  noteIndex++;
+}
+
+function toggleMusic(){
+  var AudioClass=window.AudioContext||window.webkitAudioContext;
+  if(!AudioClass){
+    alert("เบราว์เซอร์นี้ไม่รองรับเสียงเพลงครับ");
+    return;
+  }
+  if(!audioContext){audioContext=new AudioClass();}
+  if(audioContext.state==="suspended"){audioContext.resume();}
+
+  if(!musicPlaying){
+    musicPlaying=true;
+    musicButton.innerHTML="♫ ปิดเสียงเพลง";
+    playNote();
+    musicTimer=setInterval(playNote,500);
+  }else{
+    musicPlaying=false;
+    musicButton.innerHTML="♫ เปิดเสียงเพลง";
+    clearInterval(musicTimer);
+  }
+}
+</script>
+</body>
+</html>
+
+</body>
+</html>
